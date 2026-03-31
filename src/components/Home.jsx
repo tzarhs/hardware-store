@@ -26,63 +26,56 @@ export default function Home() {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 7000);
-
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
   return (
     <div className="bg-stone-200">
-      <section className="relative w-full max-w-screen-2xl mx-auto h-[calc(100vh-72px)] min-h-[400px] overflow-hidden px-4 sm:px-6 lg:px-8">
+      <section className="relative w-full h-[50vw] min-h-[260px] sm:h-[55vw] md:h-[calc(100vh-72px)] overflow-hidden">
         {/* Slides */}
-        <div className="relative w-full h-full overflow-hidden">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-700 ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              {/* Background Image */}
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="w-full h-full object-cover"
-              />
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {/* Background Image */}
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover object-center"
+            />
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black/50" />
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/50" />
 
-              {/* Text Overlay */}
-              {/* <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6 md:px-8">
-                <div className="max-w-4xl w-full">
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
-                    {slide.title}
-                  </h2>
-                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 px-4 sm:px-8">
-                    {slide.description}
-                  </p>
-                </div>
-              </div> */}
-            </div>
-          ))}
-        </div>
+            {/* Text Overlay */}
+            {/* <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-8 md:px-12">
+              <div className="max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl w-full">
+                <h2 className="text-lg sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-2 sm:mb-3 md:mb-5 leading-tight">
+                  {slide.title}
+                </h2>
+                <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90">
+                  {slide.description}
+                </p>
+              </div>
+            </div> */}
+          </div>
+        ))}
 
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-6 sm:left-8 md:left-10 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center bg-white/20 hover:bg-white/30 text-white transition-all rounded-full sm:rounded-none"
+          className="absolute left-2 sm:left-5 md:left-8 top-1/2 -translate-y-1/2 z-10 w-7 h-7 sm:w-10 sm:h-10 md:w-13 md:h-13 flex items-center justify-center bg-white/20 hover:bg-white/40 text-white transition-all rounded-full"
           aria-label="Previous slide"
         >
           <svg
-            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -95,13 +88,14 @@ export default function Home() {
             />
           </svg>
         </button>
+
         <button
           onClick={nextSlide}
-          className="absolute right-6 sm:right-8 md:right-10 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center bg-white/20 hover:bg-white/30 text-white transition-all rounded-full sm:rounded-none"
+          className="absolute right-2 sm:right-5 md:right-8 top-1/2 -translate-y-1/2 z-10 w-7 h-7 sm:w-10 sm:h-10 md:w-13 md:h-13 flex items-center justify-center bg-white/20 hover:bg-white/40 text-white transition-all rounded-full"
           aria-label="Next slide"
         >
           <svg
-            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -116,15 +110,15 @@ export default function Home() {
         </button>
 
         {/* Dot Indicators */}
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-1.5 sm:gap-2">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 transition-all ${
+              className={`h-1.5 sm:h-2 transition-all rounded-full ${
                 index === currentSlide
-                  ? "w-6 sm:w-8 bg-white"
-                  : "w-2 bg-white/50 hover:bg-white/75"
+                  ? "w-4 sm:w-6 md:w-8 bg-white"
+                  : "w-1.5 sm:w-2 bg-white/50 hover:bg-white/75"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

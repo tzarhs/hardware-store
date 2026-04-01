@@ -1,25 +1,25 @@
 export default function Footer() {
   return (
-    <footer className="bg-stone-900 text-stone-200 pt-12 pb-6 mt-16 border-t-4 border-orange-600">
+    <footer className="bg-stone-900 text-stone-200 pt-12 pb-6 border-t-4 border-orange-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-4 tracking-wide">
-              ΤΖΑΡΗΣ
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+          {/* MOBILE: Company Info first (order-first on mobile, order-none on desktop) */}
+          {/* CENTER — Company Info */}
+          <div className="col-span-2 md:col-span-1 md:order-2 text-center">
+            <h3 className="text-4xl font-bold text-white mb-4 tracking-wide">
+              tzaris.<span className="text-orange-500">paints</span>
             </h3>
             <p className="text-stone-400 text-sm leading-relaxed mb-4">
               Το κατάστημά σας για επαγγελματικά εργαλεία και οικοδομικά υλικά
               από το 1985.
             </p>
-            <div className="flex gap-4 mt-4">
-              {/* Social Media Icons */}
+            <div className="flex gap-4 mt-4 justify-center">
               <a
                 href="https://www.facebook.com/tzaris.paints"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-stone-800 hover:bg-orange-600 flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-stone-800 flex items-center justify-center transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <svg
@@ -30,11 +30,12 @@ export default function Footer() {
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
+
               <a
                 href="https://www.instagram.com/tzaris.paints/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-stone-800 hover:bg-orange-600 flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-stone-800 flex items-center justify-center transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <svg
@@ -48,106 +49,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">
-              Σύνδεσμοι
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Αρχική
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Σχετικά με εμάς
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Προϊόντα
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Υπηρεσίες
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Επικοινωνία
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          {/* <div>
-            <h4 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">
-              Υπηρεσίες
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Συμβουλευτική
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Παράδοση
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Εγκατάσταση
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Επισκευές
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                >
-                  Εκπτώσεις
-                </a>
-              </li>
-            </ul>
-          </div> */}
-
-          {/* Contact Info */}
-          <div>
+          {/* LEFT — Contact Info */}
+          <div className="col-span-1 md:order-1">
             <h4 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">
               Επικοινωνία
             </h4>
@@ -210,9 +113,9 @@ export default function Footer() {
                 </svg>
                 <span>giorgos7ier@yahoo.gr</span>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-start gap-2">
                 <svg
-                  className="w-5 h-5 text-orange-500 flex-shrink-0"
+                  className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -225,11 +128,36 @@ export default function Footer() {
                   />
                 </svg>
                 <span>
-                  Δευ, Τετ, Σαβ: 07:00-15:00
+                  Δευ, Τετ, Σαβ: 07:00–15:00
                   <br />
-                  Τρι, Πεμ, Παρ: 07:00-15:00 , 17:00-21:00
+                  Τρι, Πεμ, Παρ: 07:00–15:00, 17:00–21:00
                 </span>
               </li>
+            </ul>
+          </div>
+
+          {/* RIGHT — Quick Links */}
+          <div className="col-span-1 md:order-3 text-right">
+            <h4 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">
+              Σύνδεσμοι
+            </h4>
+            <ul className="space-y-2">
+              {[
+                "Αρχική",
+                "Σχετικά με εμάς",
+                "Προϊόντα",
+                "Υπηρεσίες",
+                "Επικοινωνία",
+              ].map((link) => (
+                <li key={link}>
+                  <a
+                    href="#"
+                    className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

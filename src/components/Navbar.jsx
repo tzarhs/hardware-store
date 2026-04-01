@@ -13,19 +13,19 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-stone-100 w-full z-20 top-0 start-0 shadow-lg">
-      <div className="flex items-center justify-between mx-auto p-6 px-6 md:px-10">
+    <nav className="bg-stone-900 w-full z-20 top-0 start-0 shadow-lg border-b-1 border-orange-600">
+      <div className="flex items-center justify-between mx-auto p-6 px-18 md:px-30">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-3">
-          <span className="self-center text-2xl text-heading font-bold whitespace-nowrap">
-            ΤΖΑΡΗΣ
+          <span className="self-center text-3xl text-white text-heading font-bold whitespace-nowrap">
+            tzaris.<span className="text-orange-500">paints</span>
           </span>
         </a>
 
         {/* Hamburger Button (mobile only) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden flex items-center justify-center w-9 h-9 text-gray-700 hover:text-orange-500 transition-colors"
+          className="md:hidden flex items-center justify-center w-9 h-9 text-white hover:text-orange-500 transition-colors"
           aria-label="Toggle menu"
         >
           {isOpen ? (
@@ -67,7 +67,7 @@ export default function Navbar() {
             <a
               href="#services"
               onClick={(e) => handleScroll(e, "#services")}
-              className="block py-2 px-3 text-heading hover:text-orange-500 transition-colors md:p-0"
+              className="block py-2 px-3 text-heading text-white hover:text-orange-500 transition-colors md:p-0"
             >
               Υπηρεσίες
             </a>
@@ -75,16 +75,8 @@ export default function Navbar() {
           <li>
             <a
               href="#"
-              onClick={(e) => handleScroll(e, "#about-us")}
-              className="block py-2 px-3 text-heading hover:text-orange-500 transition-colors md:p-0"
-            >
-              Σχετικά με εμάς
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 px-3 text-heading hover:text-orange-500 transition-colors md:p-0"
+              onClick={(e) => handleScroll(e, "#contact")}
+              className="block py-2 px-3 text-heading text-white hover:text-orange-500 transition-colors md:p-0"
             >
               Επικοινωνία
             </a>
@@ -103,25 +95,17 @@ export default function Navbar() {
             <a
               href="#services"
               onClick={(e) => handleScroll(e, "#services")}
-              className="block py-3 text-heading hover:text-orange-500 transition-colors border-b border-stone-100"
+              className="block py-3 text-heading text-white hover:text-orange-500 transition-colors border-b border-stone-100"
             >
               Υπηρεσίες
             </a>
           </li>
+
           <li>
             <a
               href="#"
-              onClick={() => setIsOpen(false)}
-              className="block py-3 text-heading hover:text-orange-500 transition-colors border-b border-stone-100"
-            >
-              Σχετικά με εμάς
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onClick={() => setIsOpen(false)}
-              className="block py-3 text-heading hover:text-orange-500 transition-colors"
+              onClick={(e) => handleScroll(e, "#contact")}
+              className="block py-3 text-heading text-white hover:text-orange-500 transition-colors"
             >
               Επικοινωνία
             </a>

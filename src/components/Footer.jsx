@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-stone-900 text-stone-200 pt-12 pb-6 border-t-4 border-orange-600">
@@ -30,7 +32,6 @@ export default function Footer() {
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
-
               <a
                 href="https://www.instagram.com/tzaris.paints/"
                 target="_blank"
@@ -141,23 +142,31 @@ export default function Footer() {
             <h4 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">
               Σύνδεσμοι
             </h4>
-            <ul className="space-y-2">
-              {[
-                "Αρχική",
-                "Σχετικά με εμάς",
-                "Προϊόντα",
-                "Υπηρεσίες",
-                "Επικοινωνία",
-              ].map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+            <ul className="space-y-2 text-md">
+              <li>
+                <a
+                  href=""
+                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
+                >
+                  Αρχική
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
+                >
+                  Υπηρεσίες
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-stone-400 hover:text-orange-500 transition-colors duration-200 text-sm"
+                >
+                  Επικοινωνία
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -169,18 +178,18 @@ export default function Footer() {
               © 2026 ΤΖΑΡΗΣ. Όλα τα δικαιώματα κατοχυρωμένα.
             </p>
             <div className="flex gap-6 text-sm">
-              <a
-                href="#"
+              <Link
+                to="/privacy-policy"
                 className="text-stone-500 hover:text-orange-500 transition-colors duration-200"
               >
                 Πολιτική Απορρήτου
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/terms-of-service"
                 className="text-stone-500 hover:text-orange-500 transition-colors duration-200"
               >
                 Όροι Χρήσης
-              </a>
+              </Link>
             </div>
           </div>
         </div>

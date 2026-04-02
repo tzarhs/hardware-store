@@ -42,7 +42,7 @@ export default function Services() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-10">
-          <p className="text-xs font-medium tracking-widest text-blue-400 uppercase mb-2">
+          <p className="text-xs font-medium tracking-widest text-orange-500 uppercase mb-2">
             Τι προσφέρουμε
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-stone-800 mb-3">

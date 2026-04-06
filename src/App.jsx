@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Reviews from "./components/Reviews";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <>
               <Home />
               <Services />
+              <Reviews />
               <Contact />
               <Footer />
             </>

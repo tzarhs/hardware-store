@@ -45,8 +45,8 @@ export default function Home() {
         {/* LEFT — About Us */}
         <div className="flex flex-col   ">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 leading-tight mb-5">
-            Το μαγαζί που χτίζει{" "}
-            <span className="text-orange-500">μαζί σας</span>
+            Εσείς φέρνετε την ιδέα{", "}
+            <span className="text-orange-500">εμείς φέρνουμε τα υλικά</span>
           </h1>
           <p className="text-stone-500 text-base leading-relaxed mb-6">
             Από το 1985, το κατάστημα μας προσφέρει επαγγελματικά εργαλεία,

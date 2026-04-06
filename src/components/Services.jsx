@@ -1,3 +1,5 @@
+import materials from "../assets/materials.jpg";
+
 export default function Services() {
   const services = [
     {
@@ -33,7 +35,7 @@ export default function Services() {
         "Κόλλες, στόκοι, σφραγιστικά, μονωτικά και υλικά για κάθε φάση κατασκευής ή ανακαίνισης.",
       badge: "Για επαγγελματίες",
       badgeStyle: "bg-orange-50 text-orange-800",
-      image: "../src/assets/materials.jpg",
+      image: materials,
     },
   ];
 

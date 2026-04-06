@@ -1,22 +1,25 @@
 "use client";
 import { useState, useEffect } from "react";
+import outside from "../assets/outside.png";
+import inside from "../assets/inside.jpg";
+import inside2 from "../assets/inside2.jpg";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: "../src/assets/outside.png",
+      image: outside,
       title: "Power Tools That Work as Hard as You Do",
       description: "Professional-grade equipment for every job site",
     },
     {
-      image: "../src/assets/inside.jpg",
+      image: inside,
       title: "Build Something Extraordinary",
       description: "Premium lumber, fasteners, and building materials",
     },
     {
-      image: "../src/assets/inside2.jpg",
+      image: inside2,
       title: "Your Project Starts Here",
       description: "Everything you need from start to finish",
     },

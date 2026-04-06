@@ -179,19 +179,19 @@ export default function Reviews() {
           {doubled.map((review, index) => (
             <div
               key={index}
-              className="w-64 sm:w-72 flex-shrink-0 bg-stone-50 border border-stone-200 rounded-2xl p-5 flex flex-col gap-3"
+              className="w-56 sm:w-72 flex-shrink-0 bg-stone-50 border border-stone-200 rounded-2xl p-4 sm:p-5 flex flex-col gap-2 sm:gap-3"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <Avatar name={review.name} />
                 <div>
-                  <p className="text-sm font-semibold text-stone-700 leading-tight">
+                  <p className="text-xs sm:text-sm font-semibold text-stone-700 leading-tight">
                     {review.name}
                   </p>
                   <p className="text-xs text-stone-400">{review.time}</p>
                 </div>
               </div>
               <StarRating rating={review.rating} />
-              <p className="text-sm text-stone-600 leading-relaxed flex-1">
+              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed flex-1">
                 {review.text}
               </p>
               <div className="flex items-center gap-1.5 mt-auto pt-2 border-t border-stone-100">

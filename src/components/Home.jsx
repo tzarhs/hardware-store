@@ -44,12 +44,12 @@ export default function Home() {
 
   return (
     <div className="bg-stone-100 min-h-[calc(100vh-72px)] flex items-center">
-      <div className="w-full px-16 sm:px-32 lg:px-48 py-24 flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="w-full px-6 sm:px-22 lg:px-48 py-14 flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* LEFT — About Us */}
-        <div className="flex flex-col   ">
+        <div className="flex flex-col order-last md:order-first ">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 leading-tight mb-5">
             Εσείς φέρνετε την ιδέα{", "}
-            <span className="text-orange-500">εμείς φέρνουμε τα υλικά</span>
+            <span className="text-orange-500">εμείς φέρνουμε τα υλικά.</span>
           </h1>
           <p className="text-stone-500 text-base leading-relaxed mb-6">
             Από το 1985, το κατάστημα μας προσφέρει επαγγελματικά εργαλεία,
@@ -58,20 +58,20 @@ export default function Home() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
             {[
               { value: "50+", label: "Χρόνια εμπειρίας" },
               { value: "1000+", label: "Προϊόντα" },
-              { value: "100%", label: "Εγγύηση ποιότητας" },
+              { value: "100%", label: "Εγγύηση" },
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="bg-white border border-stone-200 rounded-xl p-4 text-center"
+                className="bg-white border border-stone-200 rounded-xl p-2 sm:p-4 text-center"
               >
-                <p className="text-2xl font-bold text-orange-500">
+                <p className="text-lg sm:text-2xl font-bold text-orange-500">
                   {stat.value}
                 </p>
-                <p className="text-xs text-stone-500 mt-1 leading-snug">
+                <p className="text-xs text-stone-500 mt-0.5 sm:mt-1 leading-snug">
                   {stat.label}
                 </p>
               </div>
@@ -101,7 +101,7 @@ export default function Home() {
         </div>
 
         {/* RIGHT — Slider */}
-        <div className="relative w-full h-[460px] sm:h-[520px] md:h-[560px] overflow-hidden rounded-2xl shadow-lg">
+        <div className="relative w-full h-[400px] sm:h-[380px] md:h-[560px] overflow-hidden rounded-2xl shadow-lg order-first md:order-last">
           {slides.map((slide, index) => (
             <div
               key={index}

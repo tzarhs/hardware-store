@@ -1,4 +1,4 @@
-import materials from "../assets/materials.jpg";
+import materials from "../assets/materials.webp";
 
 export default function Services() {
   const services = [

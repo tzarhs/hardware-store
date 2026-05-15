@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import outside from "../assets/outside.png";
-import inside from "../assets/inside.jpg";
-import inside2 from "../assets/inside2.jpg";
+import outside from "../assets/outside.webp";
+import inside from "../assets/inside.webp";
+import inside2 from "../assets/inside2.webp";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -113,6 +113,10 @@ export default function Home() {
                 src={slide.image}
                 alt={slide.title}
                 className="w-full h-full object-cover object-center"
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchpriority={index === 0 ? "high" : "low"}
+                width="800"
+                height="560"
               />
               <div className="absolute inset-0 bg-black/25 rounded-2xl" />
             </div>

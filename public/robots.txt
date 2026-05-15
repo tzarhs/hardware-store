@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hardware-store-wheat.vercel.app/sitemap.xml

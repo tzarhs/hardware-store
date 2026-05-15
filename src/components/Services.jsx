@@ -1,4 +1,7 @@
 import materials from "../assets/materials.webp";
+import colors from "../assets/colors.webp";
+import tools from "../assets/tools.webp";
+import etools from "../assets/e-tools.webp";
 
 export default function Services() {
   const services = [
@@ -8,7 +11,7 @@ export default function Services() {
         "Εσωτερικά και εξωτερικά χρώματα, αστάρια, βερνίκια ξύλου και ειδικά προϊόντα επίστρωσης.",
       badge: "Μεγάλη ποικιλία",
       badgeStyle: "bg-blue-50 text-blue-700",
-      image: "/src/assets/photo-1562259949-e8e7689d7828.webp",
+      image: colors,
     },
     {
       title: "Εργαλεία χειρός",
@@ -16,7 +19,7 @@ export default function Services() {
         "Κατσαβίδια, κλειδιά, σφυριά, πένσες και πλήρεις σειρές εργαλείων για κάθε εργασία.",
       badge: "Επαγγελματικά",
       badgeStyle: "bg-amber-50 text-amber-800",
-      image: "/src/assets/photo-1581166397057-235af2b3c6dd.webp",
+      image: tools,
     },
     {
       title: "Ηλεκτρικά εργαλεία",
@@ -24,7 +27,7 @@ export default function Services() {
         "Τρυπάνια, τριβεία, κυκλικά πριόνια και επαναφορτιζόμενα εργαλεία κορυφαίων brands.",
       badge: "Επώνυμα brands",
       badgeStyle: "bg-green-50 text-green-800",
-      image: "/src/assets/photo-1504148455328-c376907d081c.webp",
+      image: etools,
     },
     {
       title: "Οικοδομικά υλικά",

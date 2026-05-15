@@ -75,7 +75,7 @@ export default function Contact() {
                   Τηλέφωνο
                 </p>
                 <a
-                  href="tel:2842024691"
+                  href="tel:+302842024691"
                   className="text-stone-700 font-medium hover:text-orange-500 transition-colors"
                 >
                   2842 024691

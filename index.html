@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="el">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="src/assets/repairing.png" />
@@ -12,10 +12,52 @@
       name="description"
       content="Κατάστημα οικοδομικών υλικών στην Ιεράπετρα από το 1985. Επαγγελματικά εργαλεία, χρώματα και υλικά για ιδιώτες και επαγγελματίες."
     />
-    <title>Τζαρής - Σιδηρικά Χρώματα Υλικά</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HardwareStore",
+        "name": "Τζαρής Σιδηρικά",
+        "url": "https://hardware-store-wheat.vercel.app",
+        "telephone": "+302842024691",
+        "email": "giorgos7ier@yahoo.gr",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Εμμανουήλ Λαμπράκη 25",
+          "addressLocality": "Ιεράπετρα",
+          "postalCode": "72200",
+          "addressCountry": "GR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Wednesday", "Saturday"],
+            "opens": "07:00",
+            "closes": "15:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Thursday", "Friday"],
+            "opens": "07:00",
+            "closes": "15:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Thursday", "Friday"],
+            "opens": "17:00",
+            "closes": "21:00"
+          }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.011157,
+          "longitude": 25.745154
+        }
+      }
+    </script>
+    <title>Τζαρής | Χρώματα, Σιδηρικά & Οικοδομικά Υλικά στην Ιεράπετρα</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" defer src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

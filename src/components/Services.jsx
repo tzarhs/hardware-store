@@ -8,8 +8,7 @@ export default function Services() {
         "Εσωτερικά και εξωτερικά χρώματα, αστάρια, βερνίκια ξύλου και ειδικά προϊόντα επίστρωσης.",
       badge: "Μεγάλη ποικιλία",
       badgeStyle: "bg-blue-50 text-blue-700",
-      image:
-        "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80",
+      image: "/src/assets/photo-1562259949-e8e7689d7828.webp",
     },
     {
       title: "Εργαλεία χειρός",
@@ -17,8 +16,7 @@ export default function Services() {
         "Κατσαβίδια, κλειδιά, σφυριά, πένσες και πλήρεις σειρές εργαλείων για κάθε εργασία.",
       badge: "Επαγγελματικά",
       badgeStyle: "bg-amber-50 text-amber-800",
-      image:
-        "https://images.unsplash.com/photo-1581166397057-235af2b3c6dd?w=600&q=80",
+      image: "/src/assets/photo-1581166397057-235af2b3c6dd.webp",
     },
     {
       title: "Ηλεκτρικά εργαλεία",
@@ -26,8 +24,7 @@ export default function Services() {
         "Τρυπάνια, τριβεία, κυκλικά πριόνια και επαναφορτιζόμενα εργαλεία κορυφαίων brands.",
       badge: "Επώνυμα brands",
       badgeStyle: "bg-green-50 text-green-800",
-      image:
-        "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80",
+      image: "/src/assets/photo-1504148455328-c376907d081c.webp",
     },
     {
       title: "Οικοδομικά υλικά",
@@ -69,6 +66,9 @@ export default function Services() {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  width="600"
+                  height="176"
                 />
               </div>
 

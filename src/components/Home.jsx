@@ -10,18 +10,18 @@ export default function Home() {
   const slides = [
     {
       image: outside,
-      title: "Power Tools That Work as Hard as You Do",
-      description: "Professional-grade equipment for every job site",
+      title: "Επαγγελματικά εργαλεία για κάθε δουλειά",
+      description: "Επαγγελματικός εξοπλισμός για κάθε εργοτάξιο",
     },
     {
       image: inside,
-      title: "Build Something Extraordinary",
-      description: "Premium lumber, fasteners, and building materials",
+      title: "Χτίστε κάτι εξαιρετικό",
+      description: "Οικοδομικά υλικά υψηλής ποιότητας",
     },
     {
       image: inside2,
-      title: "Your Project Starts Here",
-      description: "Everything you need from start to finish",
+      title: "Το έργο σας ξεκινά εδώ",
+      description: "Όλα όσα χρειάζεστε από την αρχή ως το τέλος",
     },
   ];
 
@@ -43,13 +43,13 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-stone-100 min-h-[calc(100vh-72px)] flex items-center">
+    <main className="bg-stone-100 min-h-[calc(100vh-72px)] flex items-center">
       <div className="w-full px-6 sm:px-22 lg:px-48 py-14 flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* LEFT — About Us */}
         <div className="flex flex-col order-last md:order-first ">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 leading-tight mb-5">
-            Εσείς φέρνετε την ιδέα{", "}
-            <span className="text-orange-500">εμείς φέρνουμε τα υλικά.</span>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-800 leading-tight mb-5">
+            Xρώματα, Σιδηρικά & Οικοδομικά Υλικά{" "}
+            <span className="text-orange-500">στην Ιεράπετρα</span>
           </h1>
           <p className="text-stone-500 text-base leading-relaxed mb-6">
             Από το 1985, το κατάστημα μας προσφέρει επαγγελματικά εργαλεία,
@@ -101,7 +101,11 @@ export default function Home() {
         </div>
 
         {/* RIGHT — Slider */}
-        <div className="relative w-full h-[400px] sm:h-[380px] md:h-[560px] overflow-hidden rounded-2xl shadow-lg order-first md:order-last">
+        <div
+          role="region"
+          aria-label="Φωτογραφίες καταστήματος"
+          className="relative w-full h-[400px] sm:h-[380px] md:h-[560px] overflow-hidden rounded-2xl shadow-lg order-first md:order-last"
+        >
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -180,6 +184,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
